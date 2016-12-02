@@ -18,7 +18,6 @@ def turnLeft(direction):
         elif direction =="west":
                 return "south"
 
-instructionList = raw_input("enter instructions: ").split(', ')
 direction ="north"
 xCord = 0
 yCord = 0
@@ -28,7 +27,7 @@ counter = 0
 visited.append((xCord,yCord))
 firstIntersection = 0
 
-for i in instructionList:
+for i in "R4, R4, L1, R3, L5, R2, R5, R1, L4, R3, L5, R2, L3, L4, L3, R1, R5, R1, L3, L1, R3, L1, R2, R2, L2, R5, L3, L4, R4, R4, R2, L4, L1, R5, L1, L4, R4, L1, R1, L2, R5, L2, L3, R2, R1, L194, R2, L4, R49, R1, R3, L5, L4, L1, R4, R2, R1, L5, R3, L5, L4, R4, R4, L2, L3, R78, L5, R4, R191, R4, R3, R1, L2, R1, R3, L1, R3, R4, R2, L2, R1, R4, L5, R2, L2, L4, L2, R1, R2, L3, R5, R2, L3, L3, R3, L1, L1, R5, L4, L4, L2, R5, R1, R4, L3, L5, L4, R5, L4, R5, R4, L3, L2, L5, R4, R3, L3, R1, L5, R5, R1, L3, R2, L5, R5, L3, R1, R4, L5, R4, R2, R3, L4, L5, R3, R4, L5, L5, R4, L4, L4, R1, R5, R3, L1, L4, L3, L4, R1, L5, L1, R2, R2, R4, R4, L5, R4, R1, L1, L1, L3, L5, L2, R4, L3, L5, L4, L1, R3".split(', '):
 	if i[0] == 'R':
 		direction=turnRight(direction)
 	elif i[0] == 'L':
@@ -45,7 +44,7 @@ for i in instructionList:
 			xCord = xCord - 1
 		for j in visited:
 			if j == (xCord, yCord) and firstIntersection == 0:
-				print "\n\nThis is the first time you've crossed your own path. Your location is:"
+				print "This is the first time you've crossed your own path. Your location is:"
 				print "x = " + str(xCord)
 				print "y = " + str(yCord)
 				print "Which is " + str(abs(xCord) + abs(yCord)) + " blocks away from where you started."
