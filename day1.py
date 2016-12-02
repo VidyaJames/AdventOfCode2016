@@ -44,7 +44,7 @@ for i in "R4, R4, L1, R3, L5, R2, R5, R1, L4, R3, L5, R2, L3, L4, L3, R1, R5, R1
 			xCord = xCord - 1
 		for j in visited:
 			if j == (xCord, yCord) and firstIntersection == 0:
-				print "This is the first time you've crossed your own path. Your location is:"
+				print "Found the point where you first cross your own path. Your location is:"
 				print "x = " + str(xCord)
 				print "y = " + str(yCord)
 				print "Which is " + str(abs(xCord) + abs(yCord)) + " blocks away from where you started."
